@@ -6,16 +6,16 @@
 }
 
 :root {
-    --primary-color: #DC2626;
-    --primary-dark: #B91C1C;
+    --primary-color: #EA580C;
+    --primary-dark: #C2410C;
     --secondary-color: #1E293B;
-    --accent-color: #3B82F6;
+    --accent-color: #F97316;
     --text-dark: #0F172A;
     --text-light: #64748B;
     --bg-light: #F8FAFC;
     --bg-white: #FFFFFF;
     --border-color: #E2E8F0;
-    --gradient-primary: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    --gradient-primary: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
     --gradient-dark: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -208,7 +208,7 @@ body[data-theme="light"] .nav-link {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(220, 38, 38, 0.12);
+    background: rgba(234, 88, 12, 0.12);
     opacity: 0;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 8px;
@@ -216,24 +216,24 @@ body[data-theme="light"] .nav-link {
 
 .nav-link:hover {
     color: #FFFFFF;
-    text-shadow: 0 0 12px rgba(220, 38, 38, 0.6), 0 0 30px rgba(220, 38, 38, 0.3);
+    text-shadow: 0 0 12px rgba(234, 88, 12, 0.6), 0 0 30px rgba(234, 88, 12, 0.3);
 }
 
 .nav-link:hover::before {
     opacity: 1;
-    box-shadow: 0 0 20px rgba(220, 38, 38, 0.15), inset 0 0 20px rgba(220, 38, 38, 0.05);
+    box-shadow: 0 0 20px rgba(234, 88, 12, 0.15), inset 0 0 20px rgba(234, 88, 12, 0.05);
 }
 
 body[data-theme="light"] .nav-link:hover {
     color: var(--primary-color);
-    text-shadow: 0 0 12px rgba(220, 38, 38, 0.3), 0 0 30px rgba(220, 38, 38, 0.15);
+    text-shadow: 0 0 12px rgba(234, 88, 12, 0.3), 0 0 30px rgba(234, 88, 12, 0.15);
 }
 
 .nav-link.active {
     color: #FFFFFF;
-    background: rgba(220, 38, 38, 0.15);
-    text-shadow: 0 0 12px rgba(220, 38, 38, 0.5), 0 0 24px rgba(220, 38, 38, 0.25);
-    box-shadow: 0 0 16px rgba(220, 38, 38, 0.2), 0 0 4px rgba(220, 38, 38, 0.3);
+    background: rgba(234, 88, 12, 0.15);
+    text-shadow: 0 0 12px rgba(234, 88, 12, 0.5), 0 0 24px rgba(234, 88, 12, 0.25);
+    box-shadow: 0 0 16px rgba(234, 88, 12, 0.2), 0 0 4px rgba(234, 88, 12, 0.3);
 }
 
 .nav-link.active::before {
@@ -242,9 +242,9 @@ body[data-theme="light"] .nav-link:hover {
 
 body[data-theme="light"] .nav-link.active {
     color: var(--primary-color);
-    background: rgba(220, 38, 38, 0.1);
+    background: rgba(234, 88, 12, 0.1);
     text-shadow: none;
-    box-shadow: 0 0 12px rgba(220, 38, 38, 0.15);
+    box-shadow: 0 0 12px rgba(234, 88, 12, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -332,10 +332,10 @@ body[data-theme="light"] .theme-toggle {
 }
 
 .theme-toggle:hover {
-    background: rgba(220, 38, 38, 0.12);
-    border-color: rgba(220, 38, 38, 0.4);
+    background: rgba(234, 88, 12, 0.12);
+    border-color: rgba(234, 88, 12, 0.4);
     color: #FFFFFF;
-    box-shadow: 0 0 16px rgba(220, 38, 38, 0.2);
+    box-shadow: 0 0 16px rgba(234, 88, 12, 0.2);
     transform: scale(1.08);
 }
 
@@ -370,7 +370,7 @@ body[data-theme="light"] .theme-toggle {
     justify-content: center;
     background: #0F172A;
     background-image: 
-        radial-gradient(circle at 20% 30%, rgba(220, 38, 38, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
         linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
     padding-top: 100px;
@@ -385,7 +385,7 @@ body[data-theme="light"] .theme-toggle {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.05) 0%, transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(234, 88, 12, 0.05) 0%, transparent 70%),
         linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
     pointer-events: none;
 }
@@ -397,7 +397,7 @@ body[data-theme="light"] .theme-toggle {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(234, 88, 12, 0.03) 0%, transparent 70%);
     animation: pulse 15s ease-in-out infinite;
     pointer-events: none;
 }
@@ -444,7 +444,7 @@ body[data-theme="light"] .theme-toggle {
 body[data-theme="light"] .hero {
     background: var(--gradient-dark);
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 50%, rgba(234, 88, 12, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
 }
 
@@ -510,7 +510,7 @@ body[data-theme="light"] .hero {
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
-    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 4px 16px rgba(234, 88, 12, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -532,7 +532,7 @@ body[data-theme="light"] .hero {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(220, 38, 38, 0.5);
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.5);
 }
 
 .btn-secondary {
@@ -646,9 +646,9 @@ section.scroll-in {
     color: var(--primary-color);
     margin-bottom: 1rem;
     padding: 0.5rem 1.25rem;
-    background: rgba(220, 38, 38, 0.1);
+    background: rgba(234, 88, 12, 0.1);
     border-radius: 50px;
-    border: 1px solid rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(234, 88, 12, 0.2);
 }
 
 .section-title {
@@ -698,7 +698,7 @@ body[data-theme="light"] .services {
     background: #0F172A;
     border-radius: 16px;
     padding: 2.5rem;
-    border: 1px solid rgba(220, 38, 38, 0.15);
+    border: 1px solid rgba(234, 88, 12, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -706,7 +706,7 @@ body[data-theme="light"] .services {
 
 body[data-theme="light"] .service-card-modern {
     background: white;
-    border-color: rgba(220, 38, 38, 0.1);
+    border-color: rgba(234, 88, 12, 0.1);
 }
 
 .service-card-modern::before {
@@ -727,27 +727,27 @@ body[data-theme="light"] .service-card-modern {
 
 .service-card-modern:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
-    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 20px 40px rgba(234, 88, 12, 0.15);
+    border-color: rgba(234, 88, 12, 0.3);
 }
 
 .service-icon-modern {
     width: 64px;
     height: 64px;
-    background: rgba(220, 38, 38, 0.1);
+    background: rgba(234, 88, 12, 0.1);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(234, 88, 12, 0.2);
     transition: all 0.3s ease;
 }
 
 .service-card-modern:hover .service-icon-modern {
-    background: rgba(220, 38, 38, 0.15);
-    border-color: rgba(220, 38, 38, 0.3);
+    background: rgba(234, 88, 12, 0.15);
+    border-color: rgba(234, 88, 12, 0.3);
     transform: scale(1.05);
 }
 
@@ -832,7 +832,7 @@ body[data-theme="light"] .service-feature {
 .service-feature:hover {
     transform: translateY(-8px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    border-color: rgba(220, 38, 38, 0.3);
+    border-color: rgba(234, 88, 12, 0.3);
 }
 
 .service-feature.large {
@@ -841,15 +841,15 @@ body[data-theme="light"] .service-feature {
     align-items: flex-start;
     padding: 2rem;
     background: #0F172A;
-    border: 1px solid rgba(220, 38, 38, 0.15);
+    border: 1px solid rgba(234, 88, 12, 0.15);
     border-radius: 16px;
     max-width: 100%;
     transition: all 0.3s ease;
 }
 
 .service-feature.large:hover {
-    border-color: rgba(220, 38, 38, 0.3);
-    box-shadow: 0 8px 24px rgba(220, 38, 38, 0.1);
+    border-color: rgba(234, 88, 12, 0.3);
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.1);
     transform: translateY(-2px);
 }
 
@@ -869,7 +869,7 @@ body[data-theme="light"] .service-feature.large {
     position: absolute;
     font-size: 8rem;
     font-weight: 800;
-    color: rgba(220, 38, 38, 0.06);
+    color: rgba(234, 88, 12, 0.06);
     line-height: 1;
     z-index: 0;
     font-family: 'Inter', sans-serif;
@@ -890,7 +890,7 @@ body[data-theme="light"] .service-feature.large {
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 8px 24px rgba(220, 38, 38, 0.3);
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.3);
     flex-shrink: 0;
 }
 
@@ -907,21 +907,21 @@ body[data-theme="light"] .service-feature.large {
 .service-icon-wrapper {
     width: 64px;
     height: 64px;
-    background: rgba(220, 38, 38, 0.1);
+    background: rgba(234, 88, 12, 0.1);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-color);
-    border: 1px solid rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(234, 88, 12, 0.2);
     margin-bottom: 1.5rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
 .service-feature:hover .service-icon-wrapper {
-    background: rgba(220, 38, 38, 0.15);
-    border-color: rgba(220, 38, 38, 0.3);
+    background: rgba(234, 88, 12, 0.15);
+    border-color: rgba(234, 88, 12, 0.3);
     transform: scale(1.05);
 }
 
@@ -981,7 +981,7 @@ body[data-theme="light"] .service-feature.large {
     left: 0;
     width: 20px;
     height: 20px;
-    background: rgba(220, 38, 38, 0.1);
+    background: rgba(234, 88, 12, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1304,7 +1304,7 @@ body[data-theme="light"] .testimonials {
     background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
     padding: 3rem;
     border-radius: 20px;
-    border: 1px solid rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(234, 88, 12, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
@@ -1313,7 +1313,7 @@ body[data-theme="light"] .testimonials {
 
 body[data-theme="light"] .testimonial-card-inner {
     background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-    border-color: rgba(220, 38, 38, 0.15);
+    border-color: rgba(234, 88, 12, 0.15);
 }
 
 .testimonial-card-inner::before {
@@ -1330,8 +1330,8 @@ body[data-theme="light"] .testimonial-card-inner {
 
 .testimonial-card:hover .testimonial-card-inner {
     transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(220, 38, 38, 0.2);
-    border-color: rgba(220, 38, 38, 0.4);
+    box-shadow: 0 16px 48px rgba(234, 88, 12, 0.2);
+    border-color: rgba(234, 88, 12, 0.4);
 }
 
 .testimonial-card:hover .testimonial-card-inner::before {
@@ -1352,7 +1352,7 @@ body[data-theme="light"] .testimonial-card {
     width: 64px;
     height: 64px;
     opacity: 0.2;
-    filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
+    filter: drop-shadow(0 4px 8px rgba(234, 88, 12, 0.3));
 }
 
 .testimonial-text {
@@ -1397,8 +1397,8 @@ body[data-theme="light"] .testimonial-card {
 }
 
 .carousel-btn {
-    background: rgba(220, 38, 38, 0.1);
-    border: 1px solid rgba(220, 38, 38, 0.2);
+    background: rgba(234, 88, 12, 0.1);
+    border: 1px solid rgba(234, 88, 12, 0.2);
     border-radius: 50%;
     width: 44px;
     height: 44px;
@@ -1411,7 +1411,7 @@ body[data-theme="light"] .testimonial-card {
 }
 
 .carousel-btn:hover {
-    background: rgba(220, 38, 38, 0.2);
+    background: rgba(234, 88, 12, 0.2);
     border-color: var(--primary-color);
     transform: scale(1.1);
 }
@@ -1431,7 +1431,7 @@ body[data-theme="light"] .testimonial-card {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(220, 38, 38, 0.3);
+    background: rgba(234, 88, 12, 0.3);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1655,7 +1655,7 @@ body[data-theme="light"] .form-group textarea {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
 }
 
 .form-group textarea {
@@ -1808,7 +1808,7 @@ body[data-theme="light"] .footer-links a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 4px 20px rgba(234, 88, 12, 0.4);
     opacity: 0;
     visibility: hidden;
     transform: translateY(30px) scale(0.8);
@@ -1843,8 +1843,8 @@ body[data-theme="light"] .footer-links a:hover {
 
 .scroll-to-top:hover {
     transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 8px 32px rgba(220, 38, 38, 0.6);
-    background: linear-gradient(135deg, #B91C1C 0%, #DC2626 100%);
+    box-shadow: 0 8px 32px rgba(234, 88, 12, 0.6);
+    background: linear-gradient(135deg, #C2410C 0%, #EA580C 100%);
 }
 
 .scroll-to-top svg {
