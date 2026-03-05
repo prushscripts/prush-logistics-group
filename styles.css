@@ -442,24 +442,24 @@ body[data-theme="light"] .hero {
     color: white;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
 }
 
 .hero-text-wrapper {
     background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(20px);
-    border-radius: 24px;
-    padding: 3.5rem 2.5rem;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
     color: #FFFFFF;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     letter-spacing: -0.02em;
@@ -470,10 +470,10 @@ body[data-theme="light"] .hero {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 2.75rem;
-    line-height: 1.75;
+    margin-bottom: 2rem;
+    line-height: 1.7;
     font-weight: 400;
     max-width: 700px;
     margin-left: auto;
@@ -485,7 +485,7 @@ body[data-theme="light"] .hero {
     gap: 1.25rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 .btn {
@@ -508,8 +508,8 @@ body[data-theme="light"] .hero {
     position: relative;
     overflow: hidden;
     font-weight: 700;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.9375rem;
 }
 
 .btn-primary::before {
@@ -540,8 +540,8 @@ body[data-theme="light"] .hero {
     position: relative;
     overflow: hidden;
     font-weight: 600;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.9375rem;
 }
 
 .btn-secondary::before {
@@ -578,7 +578,7 @@ body[data-theme="light"] .hero {
     gap: 2rem;
     flex-wrap: wrap;
     margin-top: 0;
-    padding: 2.5rem;
+    padding: 2rem;
     background: rgba(15, 23, 42, 0.3);
     backdrop-filter: blur(16px);
     border-radius: 20px;
