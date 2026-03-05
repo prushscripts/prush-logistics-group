@@ -135,7 +135,7 @@ body[data-theme="light"] .navbar.scrolled::after {
     padding: 0 2.5rem;
     position: relative;
     gap: 2.5rem;
-    height: 85px;
+    height: 110px;
 }
 
 .logo {
@@ -146,23 +146,27 @@ body[data-theme="light"] .navbar.scrolled::after {
     flex-shrink: 0;
     z-index: 1;
     margin: 0;
-    padding: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
 }
 
 .logo:hover {
-    opacity: 0.9;
+    opacity: 0.95;
     transform: scale(1.01);
+    background: rgba(15, 23, 42, 0.5);
 }
 
 .logo-img {
-    height: 70px;
+    height: 95px;
     width: auto;
-    max-width: 420px;
+    max-width: 600px;
     object-fit: contain;
     transition: all 0.3s ease;
     display: block;
     margin: 0;
-    filter: brightness(1.05) contrast(1.1);
+    filter: brightness(1.15) contrast(1.25) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .nav-menu {
@@ -250,14 +254,14 @@ body[data-theme="light"] .nav-link.active {
 @media (min-width: 768px) {
     .nav-wrapper {
         padding: 0 3rem;
-        height: 90px;
+        height: 120px;
         gap: 3rem;
     }
     
     .logo-img {
-        height: 80px;
-        max-width: 480px;
-        filter: brightness(1.08) contrast(1.12);
+        height: 110px;
+        max-width: 680px;
+        filter: brightness(1.2) contrast(1.3) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.4));
     }
     
     .nav-link {
@@ -269,14 +273,14 @@ body[data-theme="light"] .nav-link.active {
 @media (min-width: 1200px) {
     .nav-wrapper {
         padding: 0 4rem;
-        height: 95px;
+        height: 130px;
         gap: 3.5rem;
     }
     
     .logo-img {
-        height: 85px;
-        max-width: 520px;
-        filter: brightness(1.1) contrast(1.15);
+        height: 125px;
+        max-width: 750px;
+        filter: brightness(1.25) contrast(1.35) drop-shadow(0 3px 12px rgba(0, 0, 0, 0.5));
     }
     
     .nav-link {
@@ -373,7 +377,7 @@ body[data-theme="light"] .theme-toggle {
         radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
         linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-    padding-top: 100px;
+    padding-top: 130px;
     overflow: hidden;
 }
 
@@ -1869,13 +1873,13 @@ body[data-theme="light"] .footer-links a:hover {
         flex-wrap: wrap;
         gap: 1rem;
         padding: 0 1.25rem;
-        height: 75px;
+        height: 95px;
     }
     
     .logo-img {
-        height: 60px;
-        max-width: 320px;
-        filter: brightness(1.05) contrast(1.1);
+        height: 80px;
+        max-width: 450px;
+        filter: brightness(1.15) contrast(1.25) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
     }
 
     .nav-menu {
