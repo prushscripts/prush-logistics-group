@@ -190,18 +190,20 @@ body[data-theme="light"] .nav-menu {
 
 .nav-link {
     text-decoration: none;
-    color: rgba(241, 245, 249, 0.75);
+    color: rgba(241, 245, 249, 0.85);
     font-weight: 500;
     font-size: 0.9rem;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
-    letter-spacing: 0.03em;
-    padding: 0.6rem 1.35rem;
+    letter-spacing: 0.02em;
+    padding: 0.65rem 1.4rem;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     white-space: nowrap;
     background: transparent;
     transform: translateY(0);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 body[data-theme="light"] .nav-link {
@@ -210,9 +212,11 @@ body[data-theme="light"] .nav-link {
 
 .nav-link span {
     position: relative;
-    z-index: 2;
-    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), text-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 3;
+    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), text-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), font-weight 0.4s ease;
     display: inline-block;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav-link::before {
@@ -243,7 +247,7 @@ body[data-theme="light"] .nav-link {
 .nav-link:hover {
     color: #FFFFFF;
     transform: translateY(-1px);
-    text-shadow: 0 0 16px rgba(234, 88, 12, 0.8), 0 0 32px rgba(234, 88, 12, 0.5), 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 12px rgba(234, 88, 12, 0.4);
 }
 
 .nav-link:hover::before {
@@ -273,13 +277,14 @@ body[data-theme="light"] .nav-link:hover::before {
 
 .nav-link.active {
     color: #FFFFFF;
-    background: linear-gradient(135deg, rgba(234, 88, 12, 0.2) 0%, rgba(234, 88, 12, 0.12) 100%);
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.25) 0%, rgba(234, 88, 12, 0.15) 100%);
     transform: translateY(-1px);
-    text-shadow: 0 0 20px rgba(234, 88, 12, 0.7), 0 0 40px rgba(234, 88, 12, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 16px rgba(234, 88, 12, 0.5);
+    font-weight: 600;
     box-shadow: 
         0 4px 24px rgba(234, 88, 12, 0.3),
         0 0 40px rgba(234, 88, 12, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
         inset 0 0 40px rgba(234, 88, 12, 0.1);
 }
 
