@@ -135,7 +135,7 @@ body[data-theme="light"] .navbar.scrolled::after {
     padding: 0 2.5rem;
     position: relative;
     gap: 2.5rem;
-    height: 90px;
+    height: 85px;
 }
 
 .logo {
@@ -155,14 +155,14 @@ body[data-theme="light"] .navbar.scrolled::after {
 }
 
 .logo-img {
-    height: 75px;
+    height: 70px;
     width: auto;
-    max-width: 450px;
+    max-width: 420px;
     object-fit: contain;
     transition: all 0.3s ease;
     display: block;
     margin: 0;
-    filter: brightness(1.1) contrast(1.15);
+    filter: brightness(1.05) contrast(1.1);
 }
 
 .nav-menu {
@@ -250,14 +250,14 @@ body[data-theme="light"] .nav-link.active {
 @media (min-width: 768px) {
     .nav-wrapper {
         padding: 0 3rem;
-        height: 95px;
+        height: 90px;
         gap: 3rem;
     }
     
     .logo-img {
-        height: 85px;
-        max-width: 500px;
-        filter: brightness(1.15) contrast(1.2);
+        height: 80px;
+        max-width: 480px;
+        filter: brightness(1.08) contrast(1.12);
     }
     
     .nav-link {
@@ -269,14 +269,14 @@ body[data-theme="light"] .nav-link.active {
 @media (min-width: 1200px) {
     .nav-wrapper {
         padding: 0 4rem;
-        height: 100px;
+        height: 95px;
         gap: 3.5rem;
     }
     
     .logo-img {
-        height: 95px;
-        max-width: 550px;
-        filter: brightness(1.2) contrast(1.25);
+        height: 85px;
+        max-width: 520px;
+        filter: brightness(1.1) contrast(1.15);
     }
     
     .nav-link {
@@ -1692,11 +1692,11 @@ body[data-theme="light"] .form-group textarea {
 }
 
 .footer-logo-img {
-    height: 70px;
+    height: 65px;
     width: auto;
-    max-width: 300px;
+    max-width: 320px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    filter: brightness(1.05) contrast(1.1);
     opacity: 0.95;
     transition: opacity 0.3s ease;
     display: block;
@@ -1704,12 +1704,13 @@ body[data-theme="light"] .form-group textarea {
 
 .footer-logo:hover .footer-logo-img {
     opacity: 1;
+    filter: brightness(1.1) contrast(1.15);
 }
 
 @media (min-width: 768px) {
     .footer-logo-img {
-        height: 80px;
-        max-width: 350px;
+        height: 75px;
+        max-width: 380px;
     }
 }
 
@@ -1868,13 +1869,13 @@ body[data-theme="light"] .footer-links a:hover {
         flex-wrap: wrap;
         gap: 1rem;
         padding: 0 1.25rem;
-        height: 80px;
+        height: 75px;
     }
     
     .logo-img {
-        height: 65px;
-        max-width: 350px;
-        filter: brightness(1.1) contrast(1.15);
+        height: 60px;
+        max-width: 320px;
+        filter: brightness(1.05) contrast(1.1);
     }
 
     .nav-menu {
