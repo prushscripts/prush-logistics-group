@@ -1129,6 +1129,19 @@ body[data-theme="light"] .service-feature.large {
     position: relative;
 }
 
+.about-fleet-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.about-fleet-image:hover {
+    transform: scale(1.02);
+}
+
 .image-placeholder {
     background: #1E293B;
     border-radius: 12px;
@@ -1745,9 +1758,9 @@ body[data-theme="light"] .form-group textarea {
 }
 
 .footer-logo-img {
-    height: 65px;
+    height: 90px;
     width: auto;
-    max-width: 320px;
+    max-width: 450px;
     object-fit: contain;
     filter: brightness(1.05) contrast(1.1);
     opacity: 0.95;
@@ -1762,17 +1775,18 @@ body[data-theme="light"] .form-group textarea {
 
 @media (min-width: 768px) {
     .footer-logo-img {
-        height: 75px;
-        max-width: 380px;
+        height: 100px;
+        max-width: 500px;
     }
 }
 
 .footer-description {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
-    max-width: 280px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.75;
+    font-size: 0.9375rem;
+    margin-bottom: 1.75rem;
+    max-width: 320px;
+    margin-top: 0.5rem;
 }
 
 .footer-ceo-info {
