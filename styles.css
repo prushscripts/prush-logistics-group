@@ -193,18 +193,15 @@ body[data-theme="light"] .nav-menu {
     color: rgba(241, 245, 249, 0.8);
     font-weight: 500;
     font-size: 0.9rem;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    letter-spacing: 0.01em;
-    padding: 0.7rem 1.5rem;
-    border-radius: 12px;
-    overflow: hidden;
+    letter-spacing: 0.015em;
+    padding: 0.6rem 1.5rem;
     white-space: nowrap;
     background: transparent;
-    transform: translateY(0);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    border: 1px solid transparent;
+    border-radius: 8px;
 }
 
 body[data-theme="light"] .nav-link {
@@ -213,21 +210,19 @@ body[data-theme="light"] .nav-link {
 
 .nav-link span {
     position: relative;
-    z-index: 3;
-    transition: color 0.35s cubic-bezier(0.4, 0, 0.2, 1), font-weight 0.35s ease;
+    z-index: 2;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-block;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
 }
 
 .nav-link::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(234, 88, 12, 0.1);
+    background: rgba(234, 88, 12, 0.08);
     opacity: 0;
-    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.35s ease;
-    border-radius: 12px;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
     z-index: 1;
 }
 
@@ -236,78 +231,53 @@ body[data-theme="light"] .nav-link {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 60%;
-    height: 3px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
     background: var(--primary-color);
-    border-radius: 3px 3px 0 0;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px 2px 0 0;
     z-index: 2;
 }
 
 .nav-link:hover {
     color: #FFFFFF;
-    border-color: rgba(234, 88, 12, 0.2);
-    transform: translateY(-1px);
 }
 
 .nav-link:hover::before {
     opacity: 1;
-    background: rgba(234, 88, 12, 0.12);
 }
 
 .nav-link:hover::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
-.nav-link:hover span {
-    font-weight: 600;
+    width: 70%;
 }
 
 body[data-theme="light"] .nav-link:hover {
     color: var(--primary-color);
-    border-color: rgba(234, 88, 12, 0.3);
-}
-
-body[data-theme="light"] .nav-link:hover::before {
-    background: rgba(234, 88, 12, 0.08);
 }
 
 .nav-link.active {
     color: #FFFFFF;
-    background: rgba(234, 88, 12, 0.18);
-    border-color: rgba(234, 88, 12, 0.3);
     font-weight: 600;
-    transform: translateY(-1px);
-    box-shadow: 
-        0 4px 16px rgba(234, 88, 12, 0.25),
-        0 2px 8px rgba(234, 88, 12, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .nav-link.active::before {
     opacity: 1;
-    background: rgba(234, 88, 12, 0.18);
+    background: rgba(234, 88, 12, 0.12);
 }
 
 .nav-link.active::after {
-    transform: translateX(-50%) scaleX(1);
+    width: 70%;
     background: var(--primary-color);
-    box-shadow: 0 0 12px rgba(234, 88, 12, 0.6);
-}
-
-.nav-link.active span {
-    font-weight: 600;
+    box-shadow: 0 0 12px rgba(234, 88, 12, 0.4);
 }
 
 body[data-theme="light"] .nav-link.active {
     color: var(--primary-color);
-    background: rgba(234, 88, 12, 0.12);
-    border-color: rgba(234, 88, 12, 0.25);
-    box-shadow: 
-        0 4px 16px rgba(234, 88, 12, 0.2),
-        0 2px 8px rgba(234, 88, 12, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+body[data-theme="light"] .nav-link.active::before {
+    background: rgba(234, 88, 12, 0.1);
 }
 
 @media (min-width: 768px) {
