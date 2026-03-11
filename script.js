@@ -258,7 +258,77 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.willChange = 'opacity, transform';
         elementObserver.observe(el);
     });
+
+    // Premium: stagger reveal for standards list
+    if (document.body.classList.contains('premium')) {
+        const standardsSection = document.getElementById('operational-standards');
+        const standardItems = document.querySelectorAll('.standard-item');
+        if (standardsSection && standardItems.length) {
+            const standardsObs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        standardItems.forEach((item, i) => {
+                            setTimeout(() => item.classList.add('reveal'), 80 * i);
+                        });
+                        standardsObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            standardsObs.observe(standardsSection);
+        }
+
+        // Stagger reveal for why-cards and industry-cards
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const cards = entry.target.querySelectorAll('.why-card, .industry-card');
+                cards.forEach((card, i) => {
+                    setTimeout(() => card.classList.add('reveal-in'), 60 * i);
+                });
+                revealObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+        const whySection = document.getElementById('why-choose-us');
+        const industriesSection = document.getElementById('industries');
+        if (whySection) revealObserver.observe(whySection);
+        if (industriesSection) revealObserver.observe(industriesSection);
+    }
 });
+
+// Premium: parallax for hero image and experience fleet image
+function initParallax() {
+    if (!document.body.classList.contains('premium')) return;
+    const parallaxEls = document.querySelectorAll('[data-parallax]');
+    if (!parallaxEls.length) return;
+
+    let ticking = false;
+    const heroImage = document.querySelector('.hero-fleet-image[data-parallax]');
+
+    function updateParallax() {
+        const scrollY = window.pageYOffset;
+        parallaxEls.forEach(el => {
+            // Let hero image entrance animation finish before applying parallax
+            if (el === heroImage && scrollY < 80) return;
+            const rect = el.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            const viewportCenter = window.innerHeight / 2;
+            const distance = center - viewportCenter;
+            const rate = 0.06;
+            const move = distance * rate;
+            el.style.transform = `translate3d(0, ${move}px, 0)`;
+        });
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
+    setTimeout(updateParallax, 1500);
+}
+document.addEventListener('DOMContentLoaded', initParallax);
 
 // Active Navigation Link Highlighting
 window.addEventListener('scroll', () => {
