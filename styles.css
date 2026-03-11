@@ -2528,11 +2528,22 @@ body.premium[data-theme="light"] .hero-gradient{background:linear-gradient(180de
 body.premium[data-theme="light"] .hero-content{color:#fff}
 body.premium[data-theme="light"] .hero-title,body.premium[data-theme="light"] .hero-subtitle,body.premium[data-theme="light"] .stat-label{color:inherit}
 body.premium[data-theme="light"] .stat-number{background:linear-gradient(135deg,var(--primary-color),var(--accent-color));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-body.premium .navbar{background:rgba(10,15,30,0.65);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);box-shadow:0 0 20px rgba(234,88,12,0.03)}
-body.premium .navbar.scrolled{background:rgba(10,15,30,0.85);border-bottom-color:rgba(234,88,12,0.15)}
-body.premium .nav-link::after{height:2px;border-radius:0;background:var(--primary-color)}
+/* Premium navbar: glass, scroll glow, active underline, logo, CTA */
+body.premium .navbar{background:rgba(10,15,30,0.65);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);box-shadow:0 0 20px rgba(234,88,12,0.02);transition:background 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease}
+body.premium .navbar.scrolled{background:rgba(8,12,24,0.85);border-bottom-color:rgba(255,255,255,0.06);box-shadow:0 1px 0 rgba(234,88,12,0.12),0 0 24px rgba(234,88,12,0.04)}
+body.premium .nav-link{padding:0.6rem 28px;transition:all 0.25s ease}
+body.premium .nav-link::before{display:none}
+body.premium .nav-link::after{height:2px;border-radius:0;background:var(--primary-color);left:50%;transform:translateX(-50%);width:0;transition:width 0.25s ease,box-shadow 0.25s ease}
+body.premium .nav-link:hover{color:#fff}
+body.premium .nav-link:hover::after{width:70%;box-shadow:0 0 10px rgba(234,88,12,0.35)}
+body.premium .nav-link.active::after{width:100%;box-shadow:0 0 12px rgba(234,88,12,0.45)}
+body.premium .logo:hover{transform:scale(1.05);opacity:1}
+body.premium .logo:hover .logo-img{filter:brightness(1.2) contrast(1.25) drop-shadow(0 2px 8px rgba(0,0,0,0.3)) drop-shadow(0 0 20px rgba(234,88,12,0.25))}
+body.premium .btn-primary{background:linear-gradient(135deg,#ff6a00,#ff8c24);box-shadow:0 8px 30px rgba(255,120,40,0.25)}
+body.premium .btn-primary:hover{transform:scale(1.03) translateY(-2px);box-shadow:0 12px 40px rgba(255,120,40,0.4),0 0 30px rgba(255,120,40,0.2)}
 body.premium[data-theme="light"] .navbar{background:rgba(255,255,255,0.72);border-bottom-color:rgba(15,23,42,0.08)}
-body.premium[data-theme="light"] .navbar.scrolled{background:rgba(255,255,255,0.92)}
+body.premium[data-theme="light"] .navbar.scrolled{background:rgba(255,255,255,0.9);box-shadow:0 1px 0 rgba(234,88,12,0.15),0 0 20px rgba(0,0,0,0.04)}
+body.premium[data-theme="light"] .nav-link:hover{color:var(--primary-color)}
 body.premium .hero{background:transparent;position:relative}
 body.premium .hero::before,body.premium .hero::after{display:none}
 body.premium .hero-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
@@ -2549,7 +2560,6 @@ body.premium .hero-title-underline::after{content:'';position:absolute;left:0;bo
 body.premium .hero-fleet-image{opacity:0;transform:translateY(30px);animation:heroImageIn 1s cubic-bezier(0.25,0.46,0.45,0.94) 0.3s forwards}
 @keyframes heroImageIn{to{opacity:1;transform:translateY(0)}}
 body.premium .hero-fleet-image:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,0.4),0 0 60px rgba(234,88,12,0.15)}
-body.premium .btn-primary:hover{transform:scale(1.04) translateY(-2px);box-shadow:0 12px 40px rgba(234,88,12,0.5),0 0 40px rgba(234,88,12,0.25);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),box-shadow 0.35s ease}
 body.premium .btn-secondary:hover{transform:scale(1.03) translateY(-2px);border-color:rgba(234,88,12,0.4);box-shadow:0 8px 32px rgba(0,0,0,0.3),0 0 24px rgba(234,88,12,0.1)}
 body.premium .hero-stats{background:transparent;backdrop-filter:none;border:none;box-shadow:none;padding:0;gap:1.25rem}
 body.premium .hero-stats::before,body.premium .stat-item::before{display:none}
