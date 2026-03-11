@@ -2707,18 +2707,36 @@ body.premium section.reveal-in{opacity:1!important;transform:translateY(0) scale
 body.premium .why-card,body.premium .industry-card{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.35s ease,box-shadow 0.35s ease}
 body.premium .why-card.reveal-in,body.premium .industry-card.reveal-in{opacity:1;transform:translateY(0)}
 
-/* ========== ANIMATED LOGO – CORE COMPONENT ========== */
-.prush-logo-wrap{display:inline-flex;align-items:center;text-decoration:none;color:inherit;transition:opacity 0.25s ease,transform 0.25s ease}
+/* ========== PRUSH LOGISTICS — ANIMATED LOGO COMPONENT (v2) ========== */
+:root{--logo-primary:#EA580C;--logo-primary-glow:#ff7a30;--logo-text-light:#f0f4ff;--logo-text-muted:#8090b0}
+.prush-logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;cursor:pointer;user-select:none}
 .prush-logo-wrap:hover{opacity:0.95}
 .prush-logo-wrap:focus{outline:2px solid var(--primary-color);outline-offset:4px}
-.prush-logo-inner{position:relative;display:inline-block;overflow:hidden;animation:logoSlideUp 0.6s ease-out,logoPulse 4s ease-in-out 0.8s infinite}
-.prush-logo-inner::after{content:'';position:absolute;top:0;left:0;width:50%;height:100%;background:linear-gradient(90deg,rgba(255,255,255,0.4),transparent);transform:translateX(-100%);animation:logoShine 4s ease-in-out 0.8s infinite;pointer-events:none}
-.prush-logo-img{display:block;height:90px;width:auto;object-fit:contain;filter:drop-shadow(0 0 12px rgba(234,88,12,0.2));transition:filter 0.3s ease}
-.prush-logo-wrap:hover .prush-logo-img{filter:drop-shadow(0 0 20px rgba(234,88,12,0.35)) drop-shadow(0 2px 8px rgba(0,0,0,0.2))}
-.prush-logo-wrap.footer-variant .prush-logo-img{height:75px}
-.prush-logo-wrap.footer-variant .prush-logo-inner{animation:logoSlideUp 0.6s ease-out,logoPulse 4s ease-in-out 1.2s infinite}
-.prush-logo-wrap.footer-variant .prush-logo-inner::after{animation:logoShine 4s ease-in-out 1.2s infinite}
-@media (min-width:769px){.prush-logo-img{height:100px}.prush-logo-wrap.footer-variant .prush-logo-img{height:90px}}
-@keyframes logoSlideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@keyframes logoPulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(0) scale(1.04)}}
-@keyframes logoShine{0%{transform:translateX(-100%)}50%{transform:translateX(200%)}100%{transform:translateX(200%)}}
+.prush-icon{position:relative;width:46px;height:46px;flex-shrink:0}
+.prush-icon img{width:100%;height:100%;object-fit:contain;border-radius:10px;display:block;position:relative;z-index:2;animation:iconBreathe 3.5s ease-in-out infinite}
+.prush-icon::before{content:'';position:absolute;inset:-5px;border-radius:15px;background:radial-gradient(circle,rgba(234,88,12,0.28) 0%,transparent 72%);animation:haloBreathe 3.5s ease-in-out infinite;z-index:1}
+.prush-wordmark{display:flex;flex-direction:column;gap:3px;line-height:1}
+.prush-name{font-family:'Inter Tight','Inter',sans-serif;font-size:19px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--logo-text-light);display:flex}
+.prush-name span{display:inline-block;animation:letterIn 0.55s cubic-bezier(0.22,1,0.36,1) both}
+.prush-name span:nth-child(1){animation-delay:0.04s}
+.prush-name span:nth-child(2){animation-delay:0.09s}
+.prush-name span:nth-child(3){animation-delay:0.14s}
+.prush-name span:nth-child(4){animation-delay:0.19s}
+.prush-name span:nth-child(5){animation-delay:0.24s}
+.prush-name .letter-h{color:var(--logo-primary);animation:letterIn 0.55s cubic-bezier(0.22,1,0.36,1) 0.24s both,arrowGlow 3.5s ease-in-out 1.2s infinite}
+.prush-sub{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;letter-spacing:2.8px;text-transform:uppercase;color:var(--logo-text-muted);opacity:0;animation:subFadeIn 0.7s ease 0.55s forwards}
+.prush-llc{font-size:7px;letter-spacing:1.5px;color:rgba(128,144,176,0.55);margin-left:3px}
+.prush-logo-wrap.footer-variant .prush-icon{width:38px;height:38px}
+.prush-logo-wrap.footer-variant .prush-name{font-size:16px;letter-spacing:2px}
+.prush-logo-wrap.footer-variant .prush-sub{font-size:8px}
+.prush-logo-wrap:hover .prush-icon img{transform:scale(1.06);filter:brightness(1.12);transition:transform 0.3s ease,filter 0.3s ease}
+.prush-logo-wrap:hover .prush-icon::before{background:radial-gradient(circle,rgba(234,88,12,0.5) 0%,transparent 70%)}
+.prush-logo-wrap:hover .prush-name{color:#fff}
+@keyframes letterIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes subFadeIn{from{opacity:0;transform:translateX(-5px)}to{opacity:1;transform:translateX(0)}}
+@keyframes iconBreathe{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.04);filter:brightness(1.07)}}
+@keyframes haloBreathe{0%,100%{opacity:0.7;transform:scale(1)}50%{opacity:1;transform:scale(1.18)}}
+@keyframes arrowGlow{0%,80%,100%{color:var(--logo-primary);text-shadow:none}90%{color:var(--logo-primary-glow);text-shadow:0 0 14px rgba(234,88,12,0.55)}}
+body[data-theme="light"] .prush-name{color:#0F172A}
+body[data-theme="light"] .prush-sub{color:rgba(15,23,42,0.7)}
+body[data-theme="light"] .prush-logo-wrap:hover .prush-name{color:#0F172A}
