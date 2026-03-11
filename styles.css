@@ -907,6 +907,99 @@ body[data-theme="light"] .service-card-modern {
     gap: 0.5rem;
 }
 
+/* Operational Standards, Industries Served, Why Choose Us */
+.operational-standards,
+.industries-served,
+.why-choose-us {
+    padding: 5rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.operational-standards {
+    background: var(--bg-white);
+}
+
+body[data-theme="dark"] .operational-standards {
+    background: #0F172A;
+}
+
+.industries-served {
+    background: var(--bg-light);
+}
+
+body[data-theme="dark"] .industries-served {
+    background: #1E293B;
+}
+
+.why-choose-us {
+    background: var(--bg-white);
+}
+
+body[data-theme="dark"] .why-choose-us {
+    background: #0F172A;
+}
+
+.standards-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.standards-list,
+.industries-list,
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.standards-list li,
+.industries-list li,
+.why-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.standards-list li::before,
+.industries-list li::before,
+.why-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.why-list li::before {
+    background: var(--primary-color);
+}
+
+.standards-closing {
+    margin-top: 2rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.industries-list,
+.why-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.industries-list li,
+.why-list li {
+    margin-bottom: 0.75rem;
+}
+
 .service-features-modern li {
     color: var(--text-light);
     font-size: 0.875rem;
@@ -1182,6 +1275,10 @@ body[data-theme="light"] .service-feature.large {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 2rem;
+}
+
+.about-features .feature-item:first-child {
+    grid-column: 1 / -1;
 }
 
 .feature-item {
