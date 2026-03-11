@@ -277,13 +277,29 @@ document.addEventListener('DOMContentLoaded', () => {
             standardsObs.observe(standardsSection);
         }
 
-        // Stagger reveal for why-cards and industry-cards
+        // Stagger reveal for trust items
+        const trustSection = document.getElementById('trust');
+        const trustItems = document.querySelectorAll('.trust-item');
+        if (trustSection && trustItems.length) {
+            const trustObs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        trustItems.forEach((item, i) => {
+                            setTimeout(() => item.classList.add('reveal-in'), 80 * i);
+                        });
+                        trustObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            trustObs.observe(trustSection);
+        }
+        // Stagger reveal for why-list-item and industry-cards
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
-                const cards = entry.target.querySelectorAll('.why-card, .industry-card');
+                const cards = entry.target.querySelectorAll('.why-card, .industry-card, .why-list-item');
                 cards.forEach((card, i) => {
-                    setTimeout(() => card.classList.add('reveal-in'), 60 * i);
+                    setTimeout(() => card.classList.add('reveal-in'), 70 * i);
                 });
                 revealObserver.unobserve(entry.target);
             });
