@@ -2110,9 +2110,12 @@ body[data-theme="light"] .footer-links a:hover {
         height: 85px;
     }
     
-    .logo-img {
+    .logo-img,
+    .prush-logo-img {
         height: 70px;
         max-width: 380px;
+    }
+    .logo-img {
         filter: brightness(1.15) contrast(1.25) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
     }
 
@@ -2703,3 +2706,19 @@ body.premium .footer-social-link:hover{color:var(--primary-color);background:rgb
 body.premium section.reveal-in{opacity:1!important;transform:translateY(0) scale(1)!important;filter:blur(0)!important}
 body.premium .why-card,body.premium .industry-card{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.35s ease,box-shadow 0.35s ease}
 body.premium .why-card.reveal-in,body.premium .industry-card.reveal-in{opacity:1;transform:translateY(0)}
+
+/* ========== ANIMATED LOGO – CORE COMPONENT ========== */
+.prush-logo-wrap{display:inline-flex;align-items:center;text-decoration:none;color:inherit;transition:opacity 0.25s ease,transform 0.25s ease}
+.prush-logo-wrap:hover{opacity:0.95}
+.prush-logo-wrap:focus{outline:2px solid var(--primary-color);outline-offset:4px}
+.prush-logo-inner{position:relative;display:inline-block;overflow:hidden;animation:logoSlideUp 0.6s ease-out,logoPulse 4s ease-in-out 0.8s infinite}
+.prush-logo-inner::after{content:'';position:absolute;top:0;left:0;width:50%;height:100%;background:linear-gradient(90deg,rgba(255,255,255,0.4),transparent);transform:translateX(-100%);animation:logoShine 4s ease-in-out 0.8s infinite;pointer-events:none}
+.prush-logo-img{display:block;height:90px;width:auto;object-fit:contain;filter:drop-shadow(0 0 12px rgba(234,88,12,0.2));transition:filter 0.3s ease}
+.prush-logo-wrap:hover .prush-logo-img{filter:drop-shadow(0 0 20px rgba(234,88,12,0.35)) drop-shadow(0 2px 8px rgba(0,0,0,0.2))}
+.prush-logo-wrap.footer-variant .prush-logo-img{height:75px}
+.prush-logo-wrap.footer-variant .prush-logo-inner{animation:logoSlideUp 0.6s ease-out,logoPulse 4s ease-in-out 1.2s infinite}
+.prush-logo-wrap.footer-variant .prush-logo-inner::after{animation:logoShine 4s ease-in-out 1.2s infinite}
+@media (min-width:769px){.prush-logo-img{height:100px}.prush-logo-wrap.footer-variant .prush-logo-img{height:90px}}
+@keyframes logoSlideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes logoPulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(0) scale(1.04)}}
+@keyframes logoShine{0%{transform:translateX(-100%)}50%{transform:translateX(200%)}100%{transform:translateX(200%)}}
