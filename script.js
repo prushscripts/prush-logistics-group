@@ -22,7 +22,7 @@ const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 80) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -48,7 +48,7 @@ const sections = document.querySelectorAll('section[id]');
 
 // Smooth Scrolling - Simple and Clean
 function smoothScrollToSection(targetSection) {
-    const offsetTop = targetSection.offsetTop - 70;
+    const offsetTop = targetSection.offsetTop - 64;
     smoothScrollToTop(offsetTop);
 }
 
