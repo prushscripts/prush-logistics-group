@@ -204,18 +204,11 @@ body.premium .hero-title-underline::after {
     to { width: 100%; }
 }
 
-/* Hero image: fade in + slight motion */
+/* Hero image: full visibility (no fade) */
 body.premium .hero-fleet-image {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: heroImageIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
-}
-
-@keyframes heroImageIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    opacity: 1;
+    animation: none;
+    transform: translateY(0);
 }
 
 body.premium .hero-fleet-image:hover {
