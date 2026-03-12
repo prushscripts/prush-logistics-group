@@ -2577,6 +2577,11 @@ body.premium .hero-title{font-size:clamp(2.25rem,6vw,4.5rem);line-height:1.1;fon
 @media (min-width:768px){body.premium .hero-title{font-size:clamp(3rem,5vw,4.5rem)}}
 @media (min-width:1024px){body.premium .hero-title{font-size:72px}}
 body.premium .hero-subtitle{font-size:clamp(1rem,1.5vw,1.125rem);line-height:1.75;letter-spacing:0.01em}
+.hero-fleetpulse-line{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.75rem;margin-bottom:0}
+.hero-fleetpulse-line a{color:rgba(234,88,12,0.9);text-decoration:none;font-weight:500;transition:color 0.2s ease}
+.hero-fleetpulse-line a:hover{color:var(--primary-color);text-decoration:underline}
+body.premium[data-theme="light"] .hero-fleetpulse-line{color:rgba(15,23,42,0.5)}
+body.premium[data-theme="light"] .hero-fleetpulse-line a{color:var(--primary-color)}
 body.premium{background:radial-gradient(ellipse at 20% 20%,#18233a 0%,#0b1424 50%,#070d18 100%);background-attachment:fixed}
 body.premium[data-theme="light"]{background:#f8fafc;background-image:radial-gradient(ellipse at 20% 0%,rgba(234,88,12,0.04) 0%,transparent 50%)}
 body.premium[data-theme="light"] .hero-gradient{background:linear-gradient(180deg,#1e293b 0%,#0f172a 100%);opacity:0.97}
@@ -2748,6 +2753,27 @@ body.premium .contact-form-glass{background:rgba(255,255,255,0.03);border:1px so
 body.premium .contact-form-glass .btn-primary{transition:box-shadow 0.35s ease,transform 0.35s ease}
 body.premium .contact-form-glass .btn-primary:hover{box-shadow:0 8px 32px rgba(234,88,12,0.45),0 0 32px rgba(234,88,12,0.2)}
 body.premium[data-theme="light"] .contact-form-glass{background:rgba(255,255,255,0.9);border-color:rgba(15,23,42,0.08);box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+
+/* FleetPulse: Powered By Our Own Technology */
+body.premium .fleetpulse-section{padding:4rem 0;background:rgba(8,12,24,0.6)}
+body.premium[data-theme="light"] .fleetpulse-section{background:rgba(15,23,42,0.04)}
+body.premium .fleetpulse-card{background:linear-gradient(145deg,#0f1a30,#0a1425);border:1px solid rgba(234,88,12,0.15);border-radius:24px;padding:3rem;max-width:900px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,0.3),0 0 0 1px rgba(255,255,255,0.03)}
+body.premium[data-theme="light"] .fleetpulse-card{background:linear-gradient(145deg,rgba(255,255,255,0.95),rgba(248,250,252,0.98));border-color:rgba(234,88,12,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.06)}
+body.premium .fleetpulse-label{display:block;font-family:'Inter Tight','Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary-color);margin-bottom:0.5rem}
+body.premium .fleetpulse-name{font-family:'Inter Tight','Inter',sans-serif;font-size:clamp(2rem,4vw,2.75rem);font-weight:800;letter-spacing:-0.02em;color:#fff;margin:0 0 0.25rem;line-height:1.1}
+body.premium[data-theme="light"] .fleetpulse-name{color:var(--text-dark)}
+body.premium .fleetpulse-tagline{font-size:1rem;font-weight:600;color:rgba(255,255,255,0.7);margin:0 0 1.25rem;letter-spacing:0.02em}
+body.premium[data-theme="light"] .fleetpulse-tagline{color:var(--text-light)}
+body.premium .fleetpulse-description{font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.85);margin:0 0 2rem;max-width:640px}
+body.premium[data-theme="light"] .fleetpulse-description{color:var(--text-dark);opacity:0.9}
+body.premium .fleetpulse-features{list-style:none;padding:0;margin:0 0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem 1.5rem}
+@media (max-width:768px){body.premium .fleetpulse-features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:400px){body.premium .fleetpulse-features{grid-template-columns:1fr}}
+body.premium .fleetpulse-feature{display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:rgba(255,255,255,0.9);padding:0.5rem 0}
+body.premium[data-theme="light"] .fleetpulse-feature{color:var(--text-dark)}
+body.premium .fleetpulse-feature-icon{flex-shrink:0;width:28px;height:28px;border-radius:8px;background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.25);display:flex;align-items:center;justify-content:center;color:var(--primary-color)}
+body.premium .fleetpulse-feature-icon svg{width:14px;height:14px}
+body.premium .fleetpulse-cta{display:inline-block}
 body.premium .footer{border-top:1px solid rgba(255,255,255,0.06)}
 body.premium .footer-top-border{height:1px;background:linear-gradient(90deg,transparent,rgba(234,88,12,0.4),transparent);opacity:0.8}
 body.premium .footer-logo-wrap{display:inline-block;transition:filter 0.4s ease}
