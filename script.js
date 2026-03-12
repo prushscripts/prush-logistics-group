@@ -450,17 +450,6 @@ if (prevBtn && nextBtn) {
 }
 
 // Add active class styles
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: var(--primary-color);
-    }
-    .nav-link.active::after {
-        width: 100%;
-    }
-`;
-document.head.appendChild(style);
-
 // Scroll to Top Functionality
 const scrollToTopBtn = document.getElementById('scrollToTop');
 const logoLink = document.getElementById('logoLink');

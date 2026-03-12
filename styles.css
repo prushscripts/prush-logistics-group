@@ -1961,6 +1961,8 @@ body[data-theme="light"] .footer-links a:hover {
     .footer-bottom-bar {
         flex-direction: column;
         text-align: center;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
     }
     .footer-bottom-right {
         align-items: center;
@@ -2570,7 +2572,7 @@ body.premium .hero-stats{background:transparent;backdrop-filter:none;border:none
 body.premium .hero-stats::before,body.premium .stat-item::before{display:none}
 body.premium .stat-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:16px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:1.5rem 1.75rem;min-width:140px}
 body.premium .stat-item:hover{transform:translateY(-6px);border-color:rgba(234,88,12,0.2);box-shadow:0 12px 32px rgba(0,0,0,0.3),0 0 0 1px rgba(234,88,12,0.1)}
-body.premium .stat-icon{width:40px;height:40px;margin:0 auto 0.75rem;display:flex;align-items:center;justify-content:center;color:var(--primary-color)}
+body.premium .stat-icon{width:40px;height:40px;margin:0 auto 0.75rem;display:flex;align-items:center;justify-content:center;color:var(--primary-color);border-bottom:1px solid rgba(234,88,12,0.15);padding-bottom:0.75rem;margin-bottom:0.75rem}
 body.premium .stat-icon svg{width:24px;height:24px}
 body.premium .stat-item:hover .stat-icon{color:var(--accent-color)}
 body.premium .services{background:rgba(11,20,36,0.6)}
