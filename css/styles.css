@@ -423,6 +423,27 @@ body[data-theme="light"] .hero {
     margin-top: 2rem;
 }
 
+.hero-trust-line {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: heroTrustFade 1.5s ease-out 0.5s both;
+}
+
+body[data-theme="light"] .hero-trust-line {
+    color: rgba(15, 23, 42, 0.55);
+}
+
+@keyframes heroTrustFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -898,17 +919,33 @@ body[data-theme="dark"] .fleet-card {
 
 .fleet-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(234, 88, 12, 0.15);
+    box-shadow: 0 20px 48px rgba(234, 88, 12, 0.2), 0 0 0 1px rgba(234, 88, 12, 0.15);
 }
 
 body[data-theme="dark"] .fleet-card:hover {
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(234, 88, 12, 0.2);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(234, 88, 12, 0.25);
 }
 
 .fleet-card-image {
     aspect-ratio: 16/10;
     overflow: hidden;
     background: #1E293B;
+    position: relative;
+}
+
+.fleet-card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    pointer-events: none;
+}
+
+.fleet-card:hover .fleet-card-image::after {
+    border-color: rgba(234, 88, 12, 0.5);
+    box-shadow: inset 0 0 20px rgba(234, 88, 12, 0.15);
 }
 
 .fleet-card-image img {
@@ -916,6 +953,11 @@ body[data-theme="dark"] .fleet-card:hover {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.25s ease;
+}
+
+.fleet-card:hover .fleet-card-image img {
+    transform: scale(1.06);
 }
 
 .fleet-card-title {
@@ -952,6 +994,364 @@ body[data-theme="light"] .coverage-section {
 .coverage-section .section-header {
     position: relative;
     z-index: 1;
+}
+
+.coverage-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.coverage-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(234, 88, 12, 0.08);
+    border: 1px solid rgba(234, 88, 12, 0.2);
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.coverage-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.15);
+}
+
+.coverage-block-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.coverage-block-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Automotive Logistics Specialists */
+.logistics-specialists-section {
+    padding: 5rem 0;
+    background: var(--bg-white);
+    transition: background-color 0.3s ease;
+}
+
+body[data-theme="dark"] .logistics-specialists-section {
+    background: #0F172A;
+}
+
+.logistics-specialists-section .section-subtitle {
+    max-width: 720px;
+}
+
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+    .specialists-grid { grid-template-columns: 1fr; }
+}
+
+.specialist-card {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(234, 88, 12, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body[data-theme="dark"] .specialist-card {
+    background: #1E293B;
+    border-color: rgba(234, 88, 12, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.specialist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(234, 88, 12, 0.12);
+}
+
+.specialist-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(234, 88, 12, 0.12);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.specialist-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.specialist-title {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.specialist-desc {
+    font-size: 0.9375rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Why Automotive Businesses Trust */
+.why-trust-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+    transition: background-color 0.3s ease;
+}
+
+body[data-theme="dark"] .why-trust-section {
+    background: #1E293B;
+}
+
+.why-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .why-trust-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+    .why-trust-grid { grid-template-columns: 1fr; }
+}
+
+.why-trust-card {
+    background: var(--bg-white);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(234, 88, 12, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body[data-theme="dark"] .why-trust-card {
+    background: #0F172A;
+    border-color: rgba(234, 88, 12, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.why-trust-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(234, 88, 12, 0.1);
+}
+
+.why-trust-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(234, 88, 12, 0.1);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.why-trust-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.why-trust-title {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.why-trust-desc {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mid-page CTA Strip */
+.cta-strip {
+    position: relative;
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0b1220 100%);
+    overflow: hidden;
+}
+
+.cta-strip-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(234, 88, 12, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cta-strip .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.cta-strip-heading {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem;
+}
+
+.cta-strip-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 1.5rem;
+}
+
+.cta-strip-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-strip-buttons .btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-strip-buttons .btn-primary:hover {
+    box-shadow: 0 8px 28px rgba(234, 88, 12, 0.45);
+}
+
+/* Partners Strip */
+.partners-strip {
+    padding: 2.5rem 0;
+    background: var(--bg-light);
+    transition: background-color 0.3s ease;
+}
+
+body[data-theme="dark"] .partners-strip {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.partners-strip-title {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin: 0 0 1.5rem;
+}
+
+.partners-strip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.partners-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: var(--bg-white);
+    border: 1px solid rgba(234, 88, 12, 0.1);
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body[data-theme="dark"] .partners-block {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(234, 88, 12, 0.15);
+}
+
+.partners-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(234, 88, 12, 0.1);
+}
+
+.partners-block-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.partners-block-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Contact reassurance */
+.contact-reassurance {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Footer description */
+.footer-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+    max-width: 320px;
+}
+
+body[data-theme="light"] .footer-description {
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .hero-trust-line {
+        font-size: 0.8125rem;
+        margin-top: 1.25rem;
+        padding: 0 0.5rem;
+    }
+    .logistics-specialists-section .section-subtitle,
+    .coverage-section .section-subtitle {
+        padding: 0 0.5rem;
+    }
+    .cta-strip {
+        padding: 2.5rem 1rem;
+    }
+    .cta-strip-buttons .btn {
+        min-height: 48px;
+        padding: 0.75rem 1.5rem;
+    }
+    .partners-strip-grid {
+        gap: 0.75rem;
+    }
+    .partners-block {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8125rem;
+    }
 }
 
 .standards-content {

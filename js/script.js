@@ -144,7 +144,7 @@ Message:
 ${data.message}
     `);
     
-    const mailtoLink = `mailto:PrushLogisticsGroup@Outlook.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:James@prushlogistics.com?subject=${subject}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;
