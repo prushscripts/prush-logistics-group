@@ -6,7 +6,7 @@ Professional marketing website for **Prush Logistics Group LLC**, a New York–b
 
 - **HTML** — Semantic markup, single-page layout
 - **CSS** — Custom styles (`css/styles.css`), premium theme; responsive design
-- **JavaScript** — Interactivity, navigation, theme toggle, contact form (`js/script.js`)
+- **JavaScript** — Interactivity, navigation, and contact form (`js/script.js`)
 
 ## Project structure
 
